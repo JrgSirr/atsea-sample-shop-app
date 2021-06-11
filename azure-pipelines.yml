@@ -25,7 +25,7 @@ steps:
     echo Build Docker Image
     cd app/
     docker build -t acrdevjrg.azurecr.io/testmvn:$(Build.BuildNumber) .
-    ls -l
+    ls -a
 
 - task: PublishBuildArtifacts@1
   inputs:
