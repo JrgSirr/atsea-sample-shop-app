@@ -23,7 +23,7 @@ steps:
 
 - script: |
     echo Build Docker Image
-    docker build -t acrdevjrg.azurecr.io/testmvn:$(Build.BuildNumber) .
+    docker build -f app/Dockerfile -t acrdevjrg.azurecr.io/testmvn:$(Build.BuildNumber) .
 
 - task: PublishBuildArtifacts@1
   inputs:
